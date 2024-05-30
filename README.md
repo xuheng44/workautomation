@@ -1,2 +1,4 @@
-# workautomation
-Blueprint for Genesys Cloud Work Automation integration with Hubspot Ticket
+# Work Automation & Hubspot
+
+## Object
+Blueprint for integrating work automation with Hubspot ticket. 
