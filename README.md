@@ -243,6 +243,7 @@ For Demo/Script integration, need to set screen popup and related input for Inbo
 
 ### Configure DID with Inbound Call flow
 
+## Making a test call
 Then you can make call to test.
 
 * Agent receive the call
