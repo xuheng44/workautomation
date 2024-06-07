@@ -259,5 +259,38 @@ Then you can make call to test.
 * Hubspot ticket view
 <img width="1284" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/5d4f86fc-efa0-4338-8de7-c34843b3661a">
 
+## Appendix other use case
+
+### Trigger and Workflow
+
+A trigger is a resource within Genesys Cloud that allows customers to configure a reaction to specific events that occur within Genesys Cloud. The actions are workflows that you can create using Architect.
+We can use the trigger+workflow to do advanced workitems routing after Agents process workitem.
+
+Usecase:
+* Agent receive the workitem, Change Status from "Open" or any other status to "On Hold", then park it.
+* Matching the predefined trigger, launch the configured Architect workflow.
+* Worflow get the JSON data, and send a email to a User.
+
+#### Create an architect workflow
+In workflow, need to Add Variable in the Data as below: must toggle on "input to flow", name is "jsonData".
+<img width="1261" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/ef98cbd5-fab1-48b9-9c39-454a0dc1ecef">
+Workflow is very simple with "Send Notification" block:
+<img width="1275" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/86639e61-e776-483d-9ed1-cd76bc9779ec">
+Notify Body expression: ToString(Flow.jsonData.customFields.hb_ticketid_text.value)
+
+#### Create a trigger
+<img width="1241" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/984bf95e-e04a-4666-a244-eee1b52521f2">
+statusCategory == Waiting  (on Hold status)
+
+assignmentState == Parked
+
+workbinId:  cases(id), same as above setting
+
+
+
+
+
+
+
 
 
