@@ -290,6 +290,11 @@ assignmentState == Parked
 
 workbinId:  cases(id), same as above setting
 
+#### Assign workitem to Queue in workflow
+Workflow don't support "Transfer to ACD", need to use Data action to assign workitem to ACD queue.
+Please refer to below link for detail information.
+https://developer.genesys.cloud/commdigital/taskmanagement/task-management-assignment#queue-assignment-alerting
+
 
 
 
