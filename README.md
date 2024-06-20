@@ -299,7 +299,7 @@ https://developer.genesys.cloud/commdigital/taskmanagement/task-management-assig
 
 You can import below data action to GC:
 
-'''
+```
 {
   "name": "Workitem-Assign - Exported 2024-06-20 @ 21:58",
   "integrationType": "purecloud-data-actions",
@@ -342,7 +342,7 @@ You can import below data action to GC:
   },
   "secure": false
 }
-'''
+```
 
 
 
