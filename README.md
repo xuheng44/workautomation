@@ -297,6 +297,52 @@ Please refer to below link for detail information.
 
 https://developer.genesys.cloud/commdigital/taskmanagement/task-management-assignment#queue-assignment-alerting
 
+You can import below data action to GC:
+
+'''
+{
+  "name": "Workitem-Assign - Exported 2024-06-20 @ 21:58",
+  "integrationType": "purecloud-data-actions",
+  "actionType": "custom",
+  "config": {
+    "request": {
+      "requestUrlTemplate": "/api/v2/taskmanagement/workitems/${input.workitemid}",
+      "requestType": "PATCH",
+      "headers": {},
+      "requestTemplate": "{\n    \"assignmentOperation\": \"QueueAssignmentAlerting\",\n    \"queueId\": \"${input.queueid}\"\n}"
+    },
+    "response": {
+      "translationMap": {},
+      "translationMapDefaults": {},
+      "successTemplate": "${rawResult}"
+    }
+  },
+  "contract": {
+    "input": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workitemid": {
+            "type": "string"
+          },
+          "queueid": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "output": {
+      "successSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true
+      }
+    }
+  },
+  "secure": false
+}
+'''
 
 
 
