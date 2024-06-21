@@ -291,7 +291,7 @@ assignmentState == Parked
 workbinId:  cases(id), same as above setting
 
 #### Assign workitem to Queue in workflow
-Workflow don't support "Transfer to ACD", need to use Data action to assign workitem to ACD queue, but workitem status must not be in "Parked".
+Workflow don't support "Transfer to ACD", need to use Data action to assign workitem to ACD queue, but workitem status **must not be in "Parked"**.
 
 Please refer to below link for detail information.
 
