@@ -279,14 +279,15 @@ Usecase:
 In workflow, need to Add Variable in the Data as below: must toggle on "input to flow", name is "jsonData".
 <img width="1261" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/ef98cbd5-fab1-48b9-9c39-454a0dc1ecef">
 Workflow is very simple with "Send Notification" block:
-<img width="1275" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/86639e61-e776-483d-9ed1-cd76bc9779ec">
+<img width="1261" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/86639e61-e776-483d-9ed1-cd76bc9779ec">
 Notify Body expression: ToString(Flow.jsonData.customFields.hb_ticketid_text.value)
 
 #### Create a trigger
-<img width="1241" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/984bf95e-e04a-4666-a244-eee1b52521f2">
+<img width="1261" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/f3996ae4-4109-4ae5-97c8-9e9f624a3d42">
+
 statusCategory == Waiting  (on Hold status)
 
-assignmentState == Parked
+assignmentState == Disconnected
 
 workbinId:  cases(id), same as above setting
 
@@ -343,6 +344,10 @@ You can import below data action to GC:
   "secure": false
 }
 ```
+
+Then you can import the sample workflow to GC architect, don't forget to update the queueid with your value.
+
+<img width="1261" alt="image" src="https://github.com/xuheng44/workautomation/assets/89450349/e310323e-2fb9-44ea-9e56-b69db2480e46">
 
 
 
