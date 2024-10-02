@@ -164,7 +164,7 @@
                 const qconversationId = queryParameters.conversationId;
                 const qworkitemid = queryParameters.workitemid;
                 console.log("Query workitem ID is: 123 " + qworkitemid);
-                setErrorState("Cannot get the workitem");
+                setErrorState("Cannot get the workitem" + qworkitemid);
                 //console.log("Query conversationid is: " + qconversationId);
                 try {
                     if (queryParameters.gcHostOrigin && queryParameters.gcTargetEnv) {
