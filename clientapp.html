@@ -162,7 +162,7 @@
                 let client = platformClient.ApiClient.instance;
                 let clientApp = null;
                 const qconversationId = queryParameters.conversationId;
-                const qworkitemid = queryParameters.workitemid;
+                let qworkitemid = queryParameters.workitemid;
                 console.log("Query workitem ID is: " + qworkitemid);
                 //console.log("Query conversationid is: " + qconversationId);
                 try {
